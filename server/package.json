@@ -1,6 +1,10 @@
 {
   "name": "b04_1meal-planner-mern-server",
   "version": "1.0.0",
+  "engines": {
+    "npm": "9.5.1",
+    "node": "18.16.0"
+    },
   "description": "meal planner",
   "main": "index.js",
   "scripts": {
