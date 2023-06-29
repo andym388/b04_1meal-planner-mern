@@ -27,7 +27,13 @@ mongoose.connect(connection, {
   useUnifiedTopology: true,
 });
 
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error: "));
+db.once("open", function () {
+  console.log("MongoDB Connection successful");
+});
+
 // Start the server and display a message when running
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server running on port ${port}`);
 });

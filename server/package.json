@@ -4,7 +4,7 @@
   "engines": {
     "npm": "9.5.1",
     "node": "18.16.0"
-    },
+  },
   "description": "meal planner",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.6.0",
     "mongoose": "^7.2.1"
   },
   "devDependencies": {
