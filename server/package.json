@@ -8,7 +8,7 @@
   "description": "meal planner",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "set NODE_ENV=production && node src/index.js",
     "dev": "nodemon src/index.js",
     "build": "yarn install",
     "test": "echo \"Error: no test specified\" && exit 1"
