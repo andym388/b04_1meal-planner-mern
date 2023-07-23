@@ -1,0 +1,24 @@
+version: '2.19.0'
+
+services:
+  # MongoDB service
+  recipedb:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    volumes: 
+      - recipedb:/data/db
+
+  # Node API service on Docker
+  recipe-node:
+    build: .
+    ports: 
+      - 3001:3000
+    environment:
+      - PORT=3001
+      - MONGODB_URL = "mongodb+srv://andym388:U$er01108@Cluster0.zg4tnhv.mongodb.net/recipedb?retryWrites=true&w=majority"
+    depends_on: 
+      - recipedb
+
+volumes:
+  recipedb: {}

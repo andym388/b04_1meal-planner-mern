@@ -8,6 +8,12 @@ import { recipesRouter } from "./routes/recipes.js";
 // Declare back-end framework: express to create our API
 const app = express();
 
+// Setup the display on launch to test the App
+app.get("/", (req, res) => {
+  // Display default message onto the index page
+  res.send("<h2>NodeJS App launched OK</h2>");
+});
+
 // Set up Connection String to Database and the Connection Port
 dotenv.config();
 const connection = process.env.MONGODB_URL;
