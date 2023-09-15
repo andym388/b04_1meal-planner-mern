@@ -13,7 +13,7 @@ services:
   recipe-node:
     build: .
     ports: 
-      - 3001:3000
+      - 3001:3001
     environment:
       - PORT=3001
       - MONGODB_URL = "mongodb+srv://andym388:U$er01108@Cluster0.zg4tnhv.mongodb.net/recipedb?retryWrites=true&w=majority"
