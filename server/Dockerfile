@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 # Install dependencies
 COPY package*.json /usr/src/app/
 # Build your code for production
-RUN rm -rf node_modules && yarn install --production --ignore-engines
+RUN rm -rf node_modules && yarn install --production --ignore-engines --frozen-lockfile
 
 # --------------> The production image
 # Use recommended Node.js Docker image for the production build
